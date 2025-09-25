@@ -33,7 +33,7 @@ class Index extends \Magento\Backend\App\Action implements HttpGetActionInterfac
      */
     public function execute()
     {
-        \Magento\Framework\App\ObjectManager::getInstance()->get('GOLFTEC\OemClubImport\Model\OemClubImporterManagement')->crawlClub(['vendor' => 'taylormade', 'type' => 'iron']);
+        \Magento\Framework\App\ObjectManager::getInstance()->get()->crawlClub(['vendor' => 'taylormade', 'type' => 'iron']);
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('GOLFTEC_TecfitPos::Offers');
